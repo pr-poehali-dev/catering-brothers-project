@@ -170,8 +170,8 @@ const Index = () => {
             </div>
             <div className="animate-slide-in-right">
               <img 
-                src="https://cdn.poehali.dev/files/78a0a3b4-0330-4de1-91ec-2c68f965c4ec.jpg" 
-                alt="Chef cooking show outdoor" 
+                src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/9723b0a7-e8e6-4b2b-ac1d-b41798ad9864.jpg" 
+                alt="Chef cooking show" 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
@@ -416,33 +416,18 @@ const Index = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Портфолио</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <img 
-              src="https://cdn.poehali.dev/files/ad5549c1-4f64-4891-a989-affb6f3b3455.jpg" 
-              alt="Брускетты с лососем" 
+              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/aa6d7cf9-14a9-41d6-a9a9-c44b98d33ea0.jpg" 
+              alt="Portfolio 1" 
               className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
             />
             <img 
-              src="https://cdn.poehali.dev/files/459a358f-8400-4f4d-b696-306c4c21dc23.jpg" 
-              alt="Шашлык на огне" 
+              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/9723b0a7-e8e6-4b2b-ac1d-b41798ad9864.jpg" 
+              alt="Portfolio 2" 
               className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
             />
             <img 
-              src="https://cdn.poehali.dev/files/ec9b97cc-cbcb-41cb-8edc-d28c9f9d2325.jpg" 
-              alt="Мастер-класс приготовление" 
-              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
-            />
-            <img 
-              src="https://cdn.poehali.dev/files/3eef41d9-c70e-4f58-a6e4-d743d0d828aa.jpg" 
-              alt="Мини бургеры" 
-              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
-            />
-            <img 
-              src="https://cdn.poehali.dev/files/510101d0-4de8-4d7c-bf71-66c225e2aebc.jpg" 
-              alt="Корпоративный фуршет" 
-              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
-            />
-            <img 
-              src="https://cdn.poehali.dev/files/b94cb2f3-48de-42a1-99e9-4d6ad382b691.jpg" 
-              alt="Десерт-шоу с декором" 
+              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/b713c5d7-55b8-41a5-85a4-64c44983248c.jpg" 
+              alt="Portfolio 3" 
               className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
             />
           </div>
@@ -455,8 +440,8 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Мастер-классы и шоу</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img 
-                src="https://cdn.poehali.dev/files/c4117b02-f3a2-400d-be0b-c6d074a0aa0c.jpg" 
-                alt="Шашлык шоу на углях" 
+                src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/b713c5d7-55b8-41a5-85a4-64c44983248c.jpg" 
+                alt="Masterclass" 
                 className="rounded-xl shadow-xl"
               />
               <div className="space-y-6">
