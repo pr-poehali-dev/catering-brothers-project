@@ -1,12 +1,391 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import Icon from '@/components/ui/icon';
+import { format } from 'date-fns';
+import { ru } from 'date-fns/locale';
 
 const Index = () => {
+  const [date, setDate] = useState<Date>();
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    eventType: '',
+    guests: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Booking submitted:', { ...formData, date });
+    setIsBookingOpen(false);
+    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen">
+      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="text-2xl font-bold text-gradient">BrosCatering</div>
+          <div className="hidden md:flex gap-6">
+            <a href="#home" className="hover:text-primary transition-colors">Главная</a>
+            <a href="#about" className="hover:text-primary transition-colors">О нас</a>
+            <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
+            <a href="#portfolio" className="hover:text-primary transition-colors">Портфолио</a>
+            <a href="#masterclass" className="hover:text-primary transition-colors">Мастер-классы</a>
+            <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
+            <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
+          </div>
+          <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
+            <DialogTrigger asChild>
+              <Button className="bg-primary hover:bg-primary/90">
+                Забронировать
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Онлайн-бронирование</DialogTitle>
+              </DialogHeader>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Имя *</Label>
+                  <Input 
+                    id="name" 
+                    required 
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Телефон *</Label>
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    required 
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="eventType">Тип мероприятия *</Label>
+                  <Select required value={formData.eventType} onValueChange={(value) => setFormData({...formData, eventType: value})}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Выберите тип" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="wedding">Свадьба</SelectItem>
+                      <SelectItem value="banquet">Банкет</SelectItem>
+                      <SelectItem value="corporate">Корпоратив</SelectItem>
+                      <SelectItem value="family">Семейный ужин</SelectItem>
+                      <SelectItem value="poetry">Поэтический вечер</SelectItem>
+                      <SelectItem value="buffet">Фуршет</SelectItem>
+                      <SelectItem value="other">Другое</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label>Дата мероприятия *</Label>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button variant="outline" className="w-full justify-start text-left font-normal">
+                        <Icon name="Calendar" className="mr-2" size={16} />
+                        {date ? format(date, 'PPP', { locale: ru }) : 'Выберите дату'}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0">
+                      <Calendar
+                        mode="single"
+                        selected={date}
+                        onSelect={setDate}
+                        locale={ru}
+                        disabled={(date) => date < new Date()}
+                      />
+                    </PopoverContent>
+                  </Popover>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="guests">Количество гостей</Label>
+                  <Input 
+                    id="guests" 
+                    type="number" 
+                    value={formData.guests}
+                    onChange={(e) => setFormData({...formData, guests: e.target.value})}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Дополнительная информация</Label>
+                  <Textarea 
+                    id="message" 
+                    rows={3} 
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  />
+                </div>
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                  Отправить заявку
+                </Button>
+              </form>
+            </DialogContent>
+          </Dialog>
+        </div>
+      </nav>
+
+      <section id="home" className="pt-24 pb-16 px-4">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 animate-slide-in-left">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                Кулинарное <span className="text-gradient">шоу</span> для вашего события
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                Два брата. Одна страсть. Незабываемые вкусы и эффектные кулинарные шоу для любого мероприятия.
+              </p>
+              <div className="flex gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setIsBookingOpen(true)}>
+                  Забронировать
+                </Button>
+                <Button size="lg" variant="outline">
+                  <a href="#services">Наши услуги</a>
+                </Button>
+              </div>
+            </div>
+            <div className="animate-slide-in-right">
+              <img 
+                src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/9723b0a7-e8e6-4b2b-ac1d-b41798ad9864.jpg" 
+                alt="Chef cooking show" 
+                className="rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold">О компании</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Мы — два брата, объединённых любовью к кулинарии и стремлением создавать незабываемые гастрономические впечатления. 
+              Наш кейтеринг — это не просто еда, это искусство, атмосфера и шоу. Мы готовим на свадьбах, банкетах, 
+              корпоративах и семейных мероприятиях, превращая каждое событие в праздник вкуса.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">500+</div>
+                <div className="text-sm text-muted-foreground">Мероприятий</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">10K+</div>
+                <div className="text-sm text-muted-foreground">Довольных гостей</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">100+</div>
+                <div className="text-sm text-muted-foreground">Уникальных блюд</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">8+</div>
+                <div className="text-sm text-muted-foreground">Лет опыта</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Наши услуги</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: 'Heart', title: 'Свадьбы', desc: 'Создаём волшебную атмосферу самого важного дня в вашей жизни' },
+              { icon: 'Users', title: 'Корпоративы', desc: 'Делаем рабочие мероприятия незабываемыми и вкусными' },
+              { icon: 'Home', title: 'Семейные ужины', desc: 'Домашний уют с ресторанным качеством' },
+              { icon: 'Wine', title: 'Банкеты', desc: 'Торжественные приёмы с изысканными блюдами' },
+              { icon: 'Music', title: 'Поэтические вечера', desc: 'Интеллектуальная атмосфера с утончённой кухней' },
+              { icon: 'Sparkles', title: 'Фуршеты', desc: 'Элегантные закуски и напитки для любого повода' }
+            ].map((service, i) => (
+              <Card key={i} className="border-border bg-card hover:border-primary transition-all duration-300 hover:scale-105 animate-scale-in" style={{animationDelay: `${i * 100}ms`}}>
+                <CardContent className="p-6 space-y-4">
+                  <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name={service.icon} className="text-primary" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-semibold">{service.title}</h3>
+                  <p className="text-muted-foreground">{service.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Портфолио</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <img 
+              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/aa6d7cf9-14a9-41d6-a9a9-c44b98d33ea0.jpg" 
+              alt="Portfolio 1" 
+              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
+            />
+            <img 
+              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/9723b0a7-e8e6-4b2b-ac1d-b41798ad9864.jpg" 
+              alt="Portfolio 2" 
+              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
+            />
+            <img 
+              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/b713c5d7-55b8-41a5-85a4-64c44983248c.jpg" 
+              alt="Portfolio 3" 
+              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="masterclass" className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Мастер-классы и шоу</h2>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <img 
+                src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/b713c5d7-55b8-41a5-85a4-64c44983248c.jpg" 
+                alt="Masterclass" 
+                className="rounded-xl shadow-xl"
+              />
+              <div className="space-y-6">
+                <div className="space-y-3">
+                  <Icon name="Flame" className="text-primary" size={32} />
+                  <h3 className="text-2xl font-semibold">Кулинарные шоу с шефом</h3>
+                  <p className="text-muted-foreground">
+                    Эффектное приготовление блюд прямо на глазах у гостей. Огонь, дым и невероятные вкусы.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <Icon name="GraduationCap" className="text-primary" size={32} />
+                  <h3 className="text-2xl font-semibold">Интерактивные мастер-классы</h3>
+                  <p className="text-muted-foreground">
+                    Научим готовить авторские блюда, поделимся секретами и создадим атмосферу творчества.
+                  </p>
+                </div>
+                <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setIsBookingOpen(true)}>
+                  Заказать шоу
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Отзывы</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { name: 'Анна и Дмитрий', event: 'Свадьба', text: 'Спасибо за волшебный вечер! Гости до сих пор вспоминают ваше кулинарное шоу. Всё было идеально!' },
+              { name: 'Компания "TechCorp"', event: 'Корпоратив', text: 'Организовали корпоратив на 150 человек. Все в восторге! Профессионально, вкусно, креативно.' },
+              { name: 'Мария', event: 'Семейный ужин', text: 'Заказали приготовление на дому. Братья создали ресторанную атмосферу прямо на нашей кухне!' }
+            ].map((review, i) => (
+              <Card key={i} className="border-border bg-card animate-scale-in" style={{animationDelay: `${i * 150}ms`}}>
+                <CardContent className="p-6 space-y-4">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, j) => (
+                      <Icon key={j} name="Star" className="text-primary fill-primary" size={18} />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground italic">{review.text}</p>
+                  <div>
+                    <div className="font-semibold">{review.name}</div>
+                    <div className="text-sm text-muted-foreground">{review.event}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Контакты</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-border bg-card">
+              <CardContent className="p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="Phone" className="text-primary mt-1" size={24} />
+                  <div>
+                    <div className="font-semibold mb-1">Телефон</div>
+                    <a href="tel:+79991234567" className="text-muted-foreground hover:text-primary transition-colors">
+                      +7 (999) 123-45-67
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Icon name="Mail" className="text-primary mt-1" size={24} />
+                  <div>
+                    <div className="font-semibold mb-1">Email</div>
+                    <a href="mailto:info@broscatering.ru" className="text-muted-foreground hover:text-primary transition-colors">
+                      info@broscatering.ru
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Icon name="MapPin" className="text-primary mt-1" size={24} />
+                  <div>
+                    <div className="font-semibold mb-1">Адрес</div>
+                    <div className="text-muted-foreground">
+                      г. Москва, ул. Примерная, 123
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Icon name="Clock" className="text-primary mt-1" size={24} />
+                  <div>
+                    <div className="font-semibold mb-1">Часы работы</div>
+                    <div className="text-muted-foreground">
+                      Пн-Вс: 9:00 - 22:00
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-semibold mb-6">Напишите нам</h3>
+                <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Сообщение отправлено!'); }}>
+                  <Input placeholder="Ваше имя" />
+                  <Input type="email" placeholder="Email" />
+                  <Textarea rows={4} placeholder="Ваше сообщение" />
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                    Отправить
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-8 px-4 border-t border-border">
+        <div className="container mx-auto text-center text-muted-foreground">
+          <p>&copy; 2024 BrosCatering. Все права защищены.</p>
+        </div>
+      </footer>
     </div>
   );
 };
