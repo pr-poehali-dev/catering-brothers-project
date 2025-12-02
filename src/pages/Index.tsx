@@ -40,6 +40,7 @@ const Index = () => {
             <a href="#home" className="hover:text-primary transition-colors">Главная</a>
             <a href="#about" className="hover:text-primary transition-colors">О нас</a>
             <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
+            <a href="#menu" className="hover:text-primary transition-colors">Меню</a>
             <a href="#portfolio" className="hover:text-primary transition-colors">Портфолио</a>
             <a href="#masterclass" className="hover:text-primary transition-colors">Мастер-классы</a>
             <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
@@ -235,7 +236,182 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-16 px-4 bg-muted/30">
+      <section id="menu" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">Наше меню</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Богатый выбор блюд для любого мероприятия. От классических канапе до премиум деликатесов.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Sandwich" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Канапе</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• С лососем, сливочным сыром и огурцом</li>
+                  <li>• С жареной креветкой и ананасом</li>
+                  <li>• С прошутто, сыром дор-блю и грушей</li>
+                  <li>• Креветки темпура с соусом</li>
+                  <li>• Капрезе с песто</li>
+                  <li>• С сыром бри и виноградом</li>
+                  <li className="text-primary font-medium">...и ещё 20+ видов</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Beef" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Горячее мясо</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Каре ягненка с ягодным соусом</li>
+                  <li>• Премиум стейки</li>
+                  <li>• Шашлычки (курица, баранина, свинина)</li>
+                  <li>• Свиные медальоны в беконе</li>
+                  <li>• Томленые щечки</li>
+                  <li>• Люля всех видов</li>
+                  <li className="text-primary font-medium">...и многое другое</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Fish" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Рыба и морепродукты</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Лосось под сливочным соусом</li>
+                  <li>• Дорадо или сибас на гриле</li>
+                  <li>• Жареные креветки</li>
+                  <li>• Филе судака с томатами и сыром</li>
+                  <li>• Кальмар на гриле</li>
+                  <li>• Мидии в томатном соусе</li>
+                  <li className="text-primary font-medium">...и другие деликатесы</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Salad" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Салаты</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Лосось гриль с авокадо</li>
+                  <li>• Цезарь с курицей/креветками</li>
+                  <li>• С ростбифом и шампиньонами</li>
+                  <li>• Нисуаз</li>
+                  <li>• С утиной грудкой и грушей</li>
+                  <li>• Греческий</li>
+                  <li className="text-primary font-medium">...10+ вариантов</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Soup" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Супы</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Борщ классический</li>
+                  <li>• Куриная лапша</li>
+                  <li>• Тыквенный крем-суп</li>
+                  <li>• Грибной крем-суп</li>
+                  <li>• Сырный крем с семгой в хлебе</li>
+                  <li>• Гаспачо с креветкой</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="CakeSlice" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Десерты и выпечка</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Кейк попсы в глазури</li>
+                  <li>• Корзиночки с кремом и фруктами</li>
+                  <li>• Пирожное картошка</li>
+                  <li>• Хачапури</li>
+                  <li>• Пирожки в ассортименте</li>
+                  <li>• Авторские десерты</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Croissant" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Брускетты</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• С ростбифом</li>
+                  <li>• С лососем</li>
+                  <li>• С печеными овощами и брынзой</li>
+                  <li>• С жареным осьминогом</li>
+                  <li>• С тунцом и авокадо</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Coffee" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Кофе-брейки</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Круассаны с разными начинками</li>
+                  <li>• Сэндвичи</li>
+                  <li>• Оладьи и блинчики</li>
+                  <li>• Сырники с топингами</li>
+                  <li>• Драники с лососем</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary border-2 bg-gradient-to-br from-card to-primary/5">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon name="Crown" className="text-primary" size={28} />
+                  <h3 className="text-2xl font-semibold">Премиум меню</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Канапе с икрой и устрицами</li>
+                  <li>• Тартар из мраморной говядины с трюфелем</li>
+                  <li>• Карпаччо с золотыми лепестками</li>
+                  <li>• Террин из фуа-гра</li>
+                  <li>• Стейки вагю</li>
+                  <li>• Стерлядь и осетр</li>
+                  <li className="text-primary font-medium">...эксклюзивные блюда</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground mb-6">
+              Полное меню с ценами можно запросить при бронировании
+            </p>
+            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setIsBookingOpen(true)}>
+              Запросить полное меню
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Портфолио</h2>
           <div className="grid md:grid-cols-3 gap-6">
