@@ -75,7 +75,7 @@ const Index = () => {
       <section id="home" className="relative py-0">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative">
+            <div className="relative flex items-center justify-center p-8">
               <div className="absolute top-12 left-8 w-32 opacity-20 z-10">
                 <svg viewBox="0 0 200 300" fill="none" className="text-[#8b6e5d]">
                   <path d="M50 50 Q 100 100 50 150 T 50 250" stroke="currentColor" strokeWidth="3" fill="none"/>
@@ -85,12 +85,17 @@ const Index = () => {
                   <path d="M 70 60 Q 90 70 85 85 Q 95 90 85 95" stroke="currentColor" strokeWidth="2" fill="none"/>
                 </svg>
               </div>
-              <img 
-                src="https://cdn.poehali.dev/files/1e72de04-d38b-4933-8793-aba4ad31ba88.jpeg"
-                alt="Кейтеринг"
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute bottom-8 left-8 w-48 opacity-20 z-10">
+              
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#6b4e3d] translate-x-4 translate-y-4 rounded-lg"></div>
+                <img 
+                  src="https://cdn.poehali.dev/files/1e72de04-d38b-4933-8793-aba4ad31ba88.jpeg"
+                  alt="Кейтеринг"
+                  className="relative z-10 w-full h-auto max-h-[600px] object-contain rounded-lg shadow-2xl"
+                />
+              </div>
+              
+              <div className="absolute bottom-12 left-8 w-48 opacity-20 z-10">
                 <svg viewBox="0 0 300 100" fill="none" className="text-[#8b6e5d]">
                   <path d="M10 50 Q 50 10 90 50 T 170 50 Q 210 90 250 50" stroke="currentColor" strokeWidth="3" fill="none"/>
                   <line x1="250" y1="50" x2="290" y2="50" stroke="currentColor" strokeWidth="2"/>
