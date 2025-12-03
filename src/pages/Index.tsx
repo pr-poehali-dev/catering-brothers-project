@@ -27,12 +27,13 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex justify-between items-start mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-[#6b4e3d]/10 rounded-full flex items-center justify-center">
-                <span className="text-[#6b4e3d] font-bold text-sm">LOGO</span>
+              <div className="w-20 h-20 bg-gradient-to-br from-[#6b4e3d] to-[#8b6e5d] rounded-full flex items-center justify-center shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 bg-[#c4a57b] opacity-20 rounded-full transform rotate-45"></div>
+                <span className="text-white font-bold text-3xl relative z-10" style={{ fontFamily: "'Comforter Brush', cursive" }}>К</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-[#6b4e3d] uppercase tracking-wide">НАЗВАНИЕ КОМПАНИИ</h1>
-                <p className="text-sm text-[#6b4e3d]/70">Вид деятельности</p>
+                <h1 className="text-3xl font-bold text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>КейтерЕв</h1>
+                <p className="text-sm text-[#6b4e3d]/70 italic">Премиум кейтеринг</p>
               </div>
             </div>
             <div className="flex gap-8">
@@ -41,11 +42,8 @@ const Index = () => {
                   <Icon name="Phone" className="text-white" size={20} />
                 </div>
                 <div>
-                  <a href="tel:+70000000000" className="block text-[#6b4e3d] font-bold text-sm hover:text-[#8b6e5d] transition-colors">
-                    +7 (000) 000-00-00
-                  </a>
-                  <a href="tel:+70000000002" className="block text-[#6b4e3d] font-bold text-sm hover:text-[#8b6e5d] transition-colors">
-                    +7 (000) 000-00-02
+                  <a href="tel:+79854208331" className="block text-[#6b4e3d] font-bold text-sm hover:text-[#8b6e5d] transition-colors">
+                    +7 (985) 420-83-31
                   </a>
                 </div>
               </div>
@@ -54,7 +52,7 @@ const Index = () => {
                   <Icon name="MapPin" className="text-white" size={20} />
                 </div>
                 <div className="text-[#6b4e3d] font-semibold text-sm">
-                  Город, название улицы, дом 1
+                  г. Москва, ул. Театральный проезд 5с1
                 </div>
               </div>
             </div>
@@ -283,12 +281,9 @@ const Index = () => {
               <div className="w-20 h-20 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Icon name="Phone" className="text-white" size={32} />
               </div>
-              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Телефоны</h3>
-              <a href="tel:+70000000000" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block mb-2">
-                +7 (000) 000-00-00
-              </a>
-              <a href="tel:+70000000002" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block">
-                +7 (000) 000-00-02
+              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Телефон</h3>
+              <a href="tel:+79854208331" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block">
+                +7 (985) 420-83-31
               </a>
             </div>
             <div className="text-center">
@@ -306,7 +301,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Адрес</h3>
               <div className="text-lg text-[#6b4e3d]/70">
-                Город, название улицы, дом 1
+                г. Москва, ул. Театральный проезд 5с1
               </div>
             </div>
           </div>
@@ -354,7 +349,7 @@ const Index = () => {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
-                  <a href="tel:+70000000000" className="hover:text-[#c4a57b] transition-colors">+7 (000) 000-00-00</a>
+                  <a href="tel:+79854208331" className="hover:text-[#c4a57b] transition-colors">+7 (985) 420-83-31</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
@@ -364,7 +359,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-white/10 pt-8 text-center text-sm">
-            © 2024 Кейтеринговая компания. Все права защищены.
+            © 2024 КейтерЕв. Все права защищены.
           </div>
         </div>
       </footer>
