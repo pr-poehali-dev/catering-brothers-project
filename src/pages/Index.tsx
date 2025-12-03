@@ -119,10 +119,10 @@ const Index = () => {
                 <h2 className="text-[120px] mb-6 leading-none" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
                   Свежие
                 </h2>
-                <h3 className="text-7xl font-black text-black uppercase leading-tight mb-4">
+                <h3 className="text-7xl font-black text-black uppercase leading-tight mb-4 ml-12">
                   ИДЕИ ДЛЯ
                 </h3>
-                <h4 className="text-4xl text-[#6b4e3d] mb-8">
+                <h4 className="text-6xl font-light text-black mb-8">
                   вашего кейтеринга
                 </h4>
               </div>
