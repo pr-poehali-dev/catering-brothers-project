@@ -90,13 +90,6 @@ const Index = () => {
                 alt="Кейтеринг"
                 className="w-full h-[600px] object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black">
-                <img 
-                  src="https://cdn.poehali.dev/files/ad5549c1-4f64-4891-a989-affb6f3b3455.jpg"
-                  alt="Блюдо"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
               <div className="absolute bottom-8 left-8 w-48 opacity-20 z-10">
                 <svg viewBox="0 0 300 100" fill="none" className="text-[#8b6e5d]">
                   <path d="M10 50 Q 50 10 90 50 T 170 50 Q 210 90 250 50" stroke="currentColor" strokeWidth="3" fill="none"/>
@@ -201,35 +194,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bg-black">
-          <div className="container mx-auto px-6 py-0">
-            <div className="grid grid-cols-3 gap-6">
-              <img 
-                src="https://cdn.poehali.dev/files/ec9b97cc-cbcb-41cb-8edc-d28c9f9d2325.jpg"
-                alt="Блюдо 1"
-                className="w-full h-64 object-cover"
-              />
-              <img 
-                src="https://cdn.poehali.dev/files/3eef41d9-c70e-4f58-a6e4-d743d0d828aa.jpg"
-                alt="Блюдо 2"
-                className="w-full h-64 object-cover"
-              />
-              <div className="relative">
-                <img 
-                  src="https://cdn.poehali.dev/files/ad5549c1-4f64-4891-a989-affb6f3b3455.jpg"
-                  alt="Блюдо 3"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <button className="bg-[#c4a57b] text-white px-8 py-3 rounded text-sm font-bold hover:bg-[#d4b58b] transition-colors flex items-center gap-2">
-                    <span>Развернуть</span>
-                    <Icon name="ChevronDown" size={20} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </section>
 
       <section id="about" className="py-20 px-6 bg-white">
