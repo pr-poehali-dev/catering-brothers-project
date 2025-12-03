@@ -23,9 +23,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#f0ebe5]">
-      <header className="bg-[#f0ebe5] py-6 px-6 border-b border-[#6b4e3d]/10">
+      <header className="bg-[#f0ebe5] py-6 px-6">
         <div className="container mx-auto">
-          <div className="flex justify-between items-start mb-6">
+          <div className="flex justify-between items-start mb-2">
             <div className="flex items-center gap-4">
               <div className="w-20 h-20 bg-gradient-to-br from-[#6b4e3d] to-[#8b6e5d] rounded-full flex items-center justify-center shadow-lg relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#c4a57b] opacity-20 rounded-full transform rotate-45"></div>
@@ -72,8 +72,8 @@ const Index = () => {
 
       <section id="home" className="relative py-0">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative flex items-center justify-center p-8">
+          <div className="grid lg:grid-cols-2 gap-0 items-start">
+            <div className="relative flex items-start justify-center pt-0">
               <div className="absolute top-12 left-8 w-32 opacity-20 z-10">
                 <svg viewBox="0 0 200 300" fill="none" className="text-[#8b6e5d]">
                   <path d="M50 50 Q 100 100 50 150 T 50 250" stroke="currentColor" strokeWidth="3" fill="none"/>
@@ -89,7 +89,7 @@ const Index = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/1e72de04-d38b-4933-8793-aba4ad31ba88.jpeg"
                   alt="Кейтеринг"
-                  className="relative z-10 w-full h-auto max-h-[600px] object-contain rounded-lg shadow-2xl"
+                  className="relative z-10 w-full h-auto max-h-[700px] object-contain rounded-lg shadow-2xl"
                 />
               </div>
               
@@ -102,7 +102,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative bg-[#f0ebe5] py-20 px-16 flex flex-col justify-center">
+            <div className="relative bg-[#f0ebe5] pt-0 pb-8 px-16 flex flex-col justify-start">
               <div className="absolute top-12 right-8 w-32 opacity-20">
                 <svg viewBox="0 0 200 200" fill="none" className="text-[#c4a57b]">
                   <path d="M150 50 Q 100 70 120 100 Q 90 120 110 150" stroke="currentColor" strokeWidth="3" fill="none"/>
@@ -129,6 +129,24 @@ const Index = () => {
               <p className="text-[#6b4e3d] text-sm leading-relaxed mb-8">
                 гарантируют, что каждый аспект вашего застолья будет безупречен.
               </p>
+
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/ec9b97cc-cbcb-41cb-8edc-d28c9f9d2325.jpg"
+                  alt="Блюдо 1"
+                  className="w-full h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/3eef41d9-c70e-4f58-a6e4-d743d0d828aa.jpg"
+                  alt="Блюдо 2"
+                  className="w-full h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/ad5549c1-4f64-4891-a989-affb6f3b3455.jpg"
+                  alt="Блюдо 3"
+                  className="w-full h-32 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                />
+              </div>
 
               <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
                 <DialogTrigger asChild>
