@@ -27,12 +27,12 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex justify-between items-start mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-[#6b4e3d]/10 rounded-full flex items-center justify-center">
-                <span className="text-[#6b4e3d] font-bold text-sm">LOGO</span>
+              <div className="w-20 h-20 bg-[#6b4e3d] rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-3xl">🍽️</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-[#6b4e3d] uppercase tracking-wide">НАЗВАНИЕ КОМПАНИИ</h1>
-                <p className="text-sm text-[#6b4e3d]/70">Вид деятельности</p>
+                <h1 className="text-5xl text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>La Festa</h1>
+                <p className="text-base text-[#6b4e3d]/70 italic">Кейтеринг премиум-класса</p>
               </div>
             </div>
             <div className="flex gap-8">
@@ -41,11 +41,8 @@ const Index = () => {
                   <Icon name="Phone" className="text-white" size={20} />
                 </div>
                 <div>
-                  <a href="tel:+70000000000" className="block text-[#6b4e3d] font-bold text-sm hover:text-[#8b6e5d] transition-colors">
-                    +7 (000) 000-00-00
-                  </a>
-                  <a href="tel:+70000000002" className="block text-[#6b4e3d] font-bold text-sm hover:text-[#8b6e5d] transition-colors">
-                    +7 (000) 000-00-02
+                  <a href="tel:+79854208331" className="block text-[#6b4e3d] font-bold text-sm hover:text-[#8b6e5d] transition-colors">
+                    +7 (985) 420-83-31
                   </a>
                 </div>
               </div>
@@ -54,7 +51,7 @@ const Index = () => {
                   <Icon name="MapPin" className="text-white" size={20} />
                 </div>
                 <div className="text-[#6b4e3d] font-semibold text-sm">
-                  Город, название улицы, дом 1
+                  г. Москва, ул. Театральный проезд 5с1
                 </div>
               </div>
             </div>
@@ -116,14 +113,14 @@ const Index = () => {
               </div>
               
               <div className="mb-8">
-                <h2 className="text-6xl mb-6" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
-                  Свежие
+                <h2 className="text-[120px] mb-6 leading-none" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
+                  Свежие идеи
                 </h2>
-                <h3 className="text-7xl font-black text-black uppercase leading-tight mb-4">
-                  ИДЕИ ДЛЯ
+                <h3 className="text-[140px] leading-none mb-4" style={{ fontFamily: "'Comforter Brush', cursive", color: '#6b4e3d' }}>
+                  для вашего
                 </h3>
-                <h4 className="text-4xl text-[#6b4e3d] mb-8">
-                  вашего кейтеринга
+                <h4 className="text-[100px] leading-none" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
+                  кейтеринга
                 </h4>
               </div>
 
@@ -234,7 +231,7 @@ const Index = () => {
 
       <section id="about" className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl font-bold mb-6 text-[#6b4e3d] uppercase tracking-wide">О компании</h2>
+          <h2 className="text-[100px] mb-6 text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>О компании</h2>
           <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-10"></div>
           <p className="text-lg leading-relaxed mb-6 text-[#6b4e3d]/80">
             Наша компания работает на рынке кейтеринга более 15 лет. За это время мы организовали 
@@ -250,7 +247,7 @@ const Index = () => {
 
       <section id="services" className="py-20 px-6 bg-[#f0ebe5]">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-4 text-[#6b4e3d] uppercase tracking-wide">Услуги</h2>
+          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>Услуги</h2>
           <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-[#6b4e3d]/10 hover:shadow-xl transition-all duration-300">
@@ -262,7 +259,7 @@ const Index = () => {
                 />
               </div>
               <div className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4 text-[#6b4e3d] uppercase">Корпоративы</h3>
+                <h3 className="text-[60px] mb-4 text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>Корпоративы</h3>
                 <p className="text-[#6b4e3d]/70 leading-relaxed mb-6">
                   Организация корпоративных мероприятий с полным циклом обслуживания
                 </p>
@@ -278,7 +275,7 @@ const Index = () => {
                 />
               </div>
               <div className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4 text-[#6b4e3d] uppercase">Банкеты</h3>
+                <h3 className="text-[60px] mb-4 text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>Банкеты</h3>
                 <p className="text-[#6b4e3d]/70 leading-relaxed mb-6">
                   Выездное обслуживание банкетов и торжеств любого масштаба
                 </p>
@@ -294,7 +291,7 @@ const Index = () => {
                 />
               </div>
               <div className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4 text-[#6b4e3d] uppercase">Фуршеты</h3>
+                <h3 className="text-[60px] mb-4 text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>Фуршеты</h3>
                 <p className="text-[#6b4e3d]/70 leading-relaxed mb-6">
                   Фуршеты и кофе-брейки для деловых мероприятий
                 </p>
@@ -306,19 +303,16 @@ const Index = () => {
 
       <section id="contact" className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-5xl font-bold text-center mb-4 text-[#6b4e3d] uppercase tracking-wide">Контакты</h2>
+          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>Контакты</h2>
           <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             <div className="text-center">
               <div className="w-20 h-20 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Icon name="Phone" className="text-white" size={32} />
               </div>
-              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Телефоны</h3>
-              <a href="tel:+70000000000" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block mb-2">
-                +7 (000) 000-00-00
-              </a>
-              <a href="tel:+70000000002" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block">
-                +7 (000) 000-00-02
+              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Телефон</h3>
+              <a href="tel:+79854208331" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block">
+                +7 (985) 420-83-31
               </a>
             </div>
             <div className="text-center">
@@ -336,7 +330,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Адрес</h3>
               <div className="text-lg text-[#6b4e3d]/70">
-                Город, название улицы, дом 1
+                г. Москва, ул. Театральный проезд 5с1
               </div>
             </div>
           </div>
@@ -384,7 +378,7 @@ const Index = () => {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
-                  <a href="tel:+70000000000" className="hover:text-[#c4a57b] transition-colors">+7 (000) 000-00-00</a>
+                  <a href="tel:+79854208331" className="hover:text-[#c4a57b] transition-colors">+7 (985) 420-83-31</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
@@ -394,7 +388,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-white/10 pt-8 text-center text-sm">
-            © 2024 Кейтеринговая компания. Все права защищены.
+            © 2024 La Festa. Все права защищены.
           </div>
         </div>
       </footer>
