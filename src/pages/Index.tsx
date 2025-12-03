@@ -76,8 +76,8 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="relative">
-              <div className="absolute top-12 left-8 w-32 opacity-20">
-                <svg viewBox="0 0 200 300" fill="none" className="text-[#c4a57b]">
+              <div className="absolute top-12 left-8 w-32 opacity-20 z-10">
+                <svg viewBox="0 0 200 300" fill="none" className="text-[#8b6e5d]">
                   <path d="M50 50 Q 100 100 50 150 T 50 250" stroke="currentColor" strokeWidth="3" fill="none"/>
                   <circle cx="50" cy="50" r="8" fill="currentColor"/>
                   <circle cx="50" cy="150" r="8" fill="currentColor"/>
@@ -86,7 +86,7 @@ const Index = () => {
                 </svg>
               </div>
               <img 
-                src="https://cdn.poehali.dev/files/459a358f-8400-4f4d-b696-306c4c21dc23.jpg"
+                src="https://cdn.poehali.dev/files/1e72de04-d38b-4933-8793-aba4ad31ba88.jpeg"
                 alt="Кейтеринг"
                 className="w-full h-[600px] object-cover"
               />
@@ -97,8 +97,8 @@ const Index = () => {
                   className="w-full h-48 object-cover"
                 />
               </div>
-              <div className="absolute bottom-8 left-8 w-48 opacity-20">
-                <svg viewBox="0 0 300 100" fill="none" className="text-[#c4a57b]">
+              <div className="absolute bottom-8 left-8 w-48 opacity-20 z-10">
+                <svg viewBox="0 0 300 100" fill="none" className="text-[#8b6e5d]">
                   <path d="M10 50 Q 50 10 90 50 T 170 50 Q 210 90 250 50" stroke="currentColor" strokeWidth="3" fill="none"/>
                   <line x1="250" y1="50" x2="290" y2="50" stroke="currentColor" strokeWidth="2"/>
                   <circle cx="290" cy="50" r="5" fill="currentColor"/>
