@@ -115,22 +115,22 @@ const Index = () => {
                 </svg>
               </div>
               
-              <div className="mb-8">
-                <h2 className="text-[120px] mb-2 leading-none" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
+              <div className="mb-10">
+                <h2 className="text-[110px] mb-0 leading-none" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
                   Свежие
                 </h2>
-                <h3 className="text-7xl font-black text-black uppercase leading-tight mb-2 ml-24">
+                <h3 className="text-[90px] font-black text-black uppercase leading-none mb-0 ml-32 -mt-4">
                   ИДЕИ ДЛЯ
                 </h3>
-                <h4 className="text-6xl font-light text-black mb-8 whitespace-nowrap">
+                <h4 className="text-[50px] font-light text-black mb-8 whitespace-nowrap leading-none -mt-2">
                   вашего кейтеринга
                 </h4>
               </div>
 
-              <p className="text-[#6b4e3d] text-sm leading-relaxed mb-4">
+              <p className="text-[#6b4e3d] text-sm leading-relaxed mb-2">
                 Наши талантливые повара и организаторы событий
               </p>
-              <p className="text-[#6b4e3d] text-sm leading-relaxed mb-10">
+              <p className="text-[#6b4e3d] text-sm leading-relaxed mb-8">
                 гарантируют, что каждый аспект вашего застолья будет безупречен.
               </p>
 
