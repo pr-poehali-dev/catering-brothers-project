@@ -32,8 +32,8 @@ const Index = () => {
                 <span className="text-white font-bold text-3xl relative z-10" style={{ fontFamily: "'Comforter Brush', cursive" }}>К</span>
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-[#6b4e3d]" style={{ fontFamily: "'Comforter Brush', cursive" }}>КейтерЕв</h1>
-                <p className="text-sm text-[#6b4e3d]/70 italic">Премиум кейтеринг</p>
+                <h1 className="text-2xl font-bold text-[#6b4e3d] uppercase tracking-wide">КейтерЕв</h1>
+                <p className="text-sm text-[#6b4e3d]/70">Кейтеринг в Москве</p>
               </div>
             </div>
             <div className="flex gap-8">
