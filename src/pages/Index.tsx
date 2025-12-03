@@ -116,7 +116,7 @@ const Index = () => {
               </div>
               
               <div className="mb-8">
-                <h2 className="text-6xl mb-6" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
+                <h2 className="text-[120px] mb-6 leading-none" style={{ fontFamily: "'Comforter Brush', cursive", color: '#8b6e5d' }}>
                   Свежие
                 </h2>
                 <h3 className="text-7xl font-black text-black uppercase leading-tight mb-4">
