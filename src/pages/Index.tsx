@@ -156,9 +156,7 @@ const Index = () => {
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 Кулинарное <span className="text-gradient">шоу</span> для вашего события
               </h1>
-              <p className="text-xl text-muted-foreground">
-                Два брата. Одна страсть. Незабываемые вкусы и эффектные кулинарные шоу для любого мероприятия.
-              </p>
+              <p className="text-xl text-muted-foreground">Незабываемые вкусы и эффектные кулинарные шоу для любого мероприятия.</p>
               <div className="flex gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setIsBookingOpen(true)}>
                   Забронировать
