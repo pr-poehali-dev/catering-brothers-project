@@ -504,8 +504,8 @@ const Index = () => {
                   <Icon name="Phone" className="text-primary mt-1" size={24} />
                   <div>
                     <div className="font-semibold mb-1">Телефон</div>
-                    <a href="tel:+79991234567" className="text-muted-foreground hover:text-primary transition-colors">
-                      +7 (999) 123-45-67
+                    <a href="tel:+79854208331" className="text-muted-foreground hover:text-primary transition-colors">
+                      +7 (985) 420-83-31
                     </a>
                   </div>
                 </div>
@@ -523,7 +523,7 @@ const Index = () => {
                   <div>
                     <div className="font-semibold mb-1">Адрес</div>
                     <div className="text-muted-foreground">
-                      г. Москва, ул. Примерная, 123
+                      г. Москва, ул. Театральный проезд 5с1
                     </div>
                   </div>
                 </div>
@@ -532,7 +532,7 @@ const Index = () => {
                   <div>
                     <div className="font-semibold mb-1">Часы работы</div>
                     <div className="text-muted-foreground">
-                      Пн-Вс: 9:00 - 22:00
+                      Пн-Вс: 9:00 - 00:00
                     </div>
                   </div>
                 </div>
