@@ -424,9 +424,9 @@ const Index = () => {
               className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
             />
             <img 
-              src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/b713c5d7-55b8-41a5-85a4-64c44983248c.jpg" 
+              src="https://cdn.poehali.dev/files/245c75b1-57bd-4392-b4c6-f46361ec7816.jpg" 
               alt="Portfolio 3" 
-              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover"
+              className="rounded-xl hover:scale-105 transition-transform duration-300 w-full h-64 object-cover brightness-110 saturate-125"
             />
           </div>
         </div>
