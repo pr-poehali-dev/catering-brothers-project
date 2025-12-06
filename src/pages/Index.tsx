@@ -557,7 +557,7 @@ const Index = () => {
 
       <footer className="py-8 px-4 border-t border-border">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>&copy; 2024 BrosCatering. Все права защищены.</p>
+          <p>© 2024 CaterEV. Все права защищены.</p>
         </div>
       </footer>
     </div>
