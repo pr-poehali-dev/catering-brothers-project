@@ -438,7 +438,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in">Мастер-классы и шоу</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img 
-                src="https://cdn.poehali.dev/projects/76f9b8c9-c52f-4a7e-88a5-b41945f30b71/files/b713c5d7-55b8-41a5-85a4-64c44983248c.jpg" 
+                src="https://cdn.poehali.dev/files/b00ebf7f-0aeb-46b3-8128-82a06b84e475.jpg" 
                 alt="Masterclass" 
                 className="rounded-xl shadow-xl"
               />
