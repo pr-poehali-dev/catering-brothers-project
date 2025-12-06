@@ -253,48 +253,61 @@ const Index = () => {
           <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Меню</h2>
           <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-4 text-center">Холодные закуски</h3>
-              <ul className="space-y-2 text-[#6b4e3d]/80">
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Мясная нарезка</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Сырная тарелка</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Рыбная нарезка</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Овощная нарезка</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Канапе ассорти</li>
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div>
+              <h3 className="text-xl font-bold text-[#6b4e3d] mb-6 pb-2 border-b-2 border-[#6b4e3d]">Холодные закуски</h3>
+              <ul className="space-y-3 text-[#6b4e3d]/80">
+                <li>• Мясная нарезка</li>
+                <li>• Сырная тарелка</li>
+                <li>• Рыбная нарезка</li>
+                <li>• Овощная нарезка</li>
+                <li>• Канапе ассорти</li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-4 text-center">Горячие закуски</h3>
-              <ul className="space-y-2 text-[#6b4e3d]/80">
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Жульен с грибами</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Мини-пицца</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Шашлычки</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Тарталетки</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Брускетты</li>
+            <div>
+              <h3 className="text-xl font-bold text-[#6b4e3d] mb-6 pb-2 border-b-2 border-[#6b4e3d]">Горячие закуски</h3>
+              <ul className="space-y-3 text-[#6b4e3d]/80">
+                <li>• Жульен с грибами</li>
+                <li>• Мини-пицца</li>
+                <li>• Шашлычки</li>
+                <li>• Тарталетки</li>
+                <li>• Брускетты</li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-4 text-center">Основные блюда</h3>
-              <ul className="space-y-2 text-[#6b4e3d]/80">
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Стейк из говядины</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Рыба на гриле</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Курица с овощами</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Паста карбонара</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Ризотто с морепродуктами</li>
+            <div>
+              <h3 className="text-xl font-bold text-[#6b4e3d] mb-6 pb-2 border-b-2 border-[#6b4e3d]">Основные блюда</h3>
+              <ul className="space-y-3 text-[#6b4e3d]/80">
+                <li>• Стейк из говядины</li>
+                <li>• Рыба на гриле</li>
+                <li>• Курица с овощами</li>
+                <li>• Паста карбонара</li>
+                <li>• Ризотто с морепродуктами</li>
               </ul>
             </div>
-
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-4 text-center">Десерты</h3>
-              <ul className="space-y-2 text-[#6b4e3d]/80">
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Тирамису</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Чизкейк</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Панна-котта</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Фруктовая нарезка</li>
-                <li className="border-b border-[#6b4e3d]/10 pb-2">Макаронс</li>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto mt-12">
+            <div>
+              <h3 className="text-xl font-bold text-[#6b4e3d] mb-6 pb-2 border-b-2 border-[#6b4e3d]">Десерты</h3>
+              <ul className="space-y-3 text-[#6b4e3d]/80">
+                <li>• Тирамису</li>
+                <li>• Чизкейк</li>
+                <li>• Панна-котта</li>
+                <li>• Фруктовая нарезка</li>
+                <li>• Макаронс</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-[#6b4e3d] mb-6 pb-2 border-b-2 border-[#6b4e3d]">Напитки</h3>
+              <ul className="space-y-3 text-[#6b4e3d]/80">
+                <li>• Свежевыжатые соки</li>
+                <li>• Кофе и чай</li>
+                <li>• Лимонады домашние</li>
+                <li>• Морсы</li>
+                <li>• Минеральная вода</li>
               </ul>
             </div>
           </div>
@@ -303,125 +316,203 @@ const Index = () => {
 
       <section id="services" className="py-20 px-6 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Услуги</h2>
+          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Наши услуги</h2>
           <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src="https://cdn.poehali.dev/files/510101d0-4de8-4d7c-bf71-66c225e2aebc.jpg"
-                    alt="Корпоративы"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-3 text-[#6b4e3d]">Корпоративы</h3>
-                  <p className="text-[#6b4e3d]/70 text-sm leading-relaxed">
-                    Полный цикл организации корпоративных мероприятий
-                  </p>
-                </div>
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Users" className="text-white" size={28} />
               </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#6b4e3d]">Корпоративы</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Организация корпоративных мероприятий любого формата: тимбилдинги, праздничные вечера, презентации
+              </p>
             </div>
 
-            <div className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src="https://cdn.poehali.dev/files/c4117b02-f3a2-400d-be0b-c6d074a0aa0c.jpg"
-                    alt="Банкеты"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-3 text-[#6b4e3d]">Банкеты</h3>
-                  <p className="text-[#6b4e3d]/70 text-sm leading-relaxed">
-                    Выездное обслуживание торжеств любого масштаба
-                  </p>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Sparkles" className="text-white" size={28} />
               </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#6b4e3d]">Банкеты</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Выездное обслуживание торжественных мероприятий: юбилеи, дни рождения, семейные праздники
+              </p>
             </div>
 
-            <div className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src="https://cdn.poehali.dev/files/b94cb2f3-48de-42a1-99e9-4d6ad382b691.jpg"
-                    alt="Фуршеты"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-3 text-[#6b4e3d]">Фуршеты</h3>
-                  <p className="text-[#6b4e3d]/70 text-sm leading-relaxed">
-                    Кофе-брейки для деловых мероприятий
-                  </p>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Coffee" className="text-white" size={28} />
               </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#6b4e3d]">Фуршеты и кофе-брейки</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Сервировка и обслуживание деловых встреч, конференций, семинаров
+              </p>
             </div>
 
-            <div className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src="https://cdn.poehali.dev/files/459a358f-8400-4f4d-b696-306c4c21dc23.jpg"
-                    alt="Свадьбы"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-3 text-[#6b4e3d]">Свадьбы</h3>
-                  <p className="text-[#6b4e3d]/70 text-sm leading-relaxed">
-                    Создание незабываемого праздника для молодоженов
-                  </p>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Heart" className="text-white" size={28} />
               </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#6b4e3d]">Свадьбы</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Создание незабываемого праздника для молодоженов: от разработки меню до полного обслуживания
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-6 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Контакты</h2>
+      <section id="portfolio" className="py-20 px-6 bg-[#f0ebe5]">
+        <div className="container mx-auto">
+          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Портфолио</h2>
           <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
-          <div className="grid md:grid-cols-3 gap-12 mb-16">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Icon name="Phone" className="text-white" size={32} />
-              </div>
-              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Телефон</h3>
-              <a href="tel:+79854208331" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors block">
-                +7 (985) 420-83-31
-              </a>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+              <img 
+                src="https://cdn.poehali.dev/files/510101d0-4de8-4d7c-bf71-66c225e2aebc.jpg"
+                alt="Мероприятие 1"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Icon name="Mail" className="text-white" size={32} />
-              </div>
-              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Email</h3>
-              <a href="mailto:info@catering.ru" className="text-lg text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors">
-                info@catering.ru
-              </a>
+            <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+              <img 
+                src="https://cdn.poehali.dev/files/c4117b02-f3a2-400d-be0b-c6d074a0aa0c.jpg"
+                alt="Мероприятие 2"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-[#6b4e3d] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Icon name="MapPin" className="text-white" size={32} />
-              </div>
-              <h3 className="font-bold mb-4 uppercase text-sm tracking-wider text-[#6b4e3d]">Адрес</h3>
-              <div className="text-lg text-[#6b4e3d]/70">
-                г. Москва, ул. Театральный проезд 5с1
-              </div>
+            <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+              <img 
+                src="https://cdn.poehali.dev/files/b94cb2f3-48de-42a1-99e9-4d6ad382b691.jpg"
+                alt="Мероприятие 3"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+              <img 
+                src="https://cdn.poehali.dev/files/459a358f-8400-4f4d-b696-306c4c21dc23.jpg"
+                alt="Мероприятие 4"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+              <img 
+                src="https://cdn.poehali.dev/files/ec9b97cc-cbcb-41cb-8edc-d28c9f9d2325.jpg"
+                alt="Мероприятие 5"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+              <img 
+                src="https://cdn.poehali.dev/files/3eef41d9-c70e-4f58-a6e4-d743d0d828aa.jpg"
+                alt="Мероприятие 6"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
             </div>
           </div>
-          <div className="text-center">
-            <Button 
-              size="lg" 
-              className="bg-[#6b4e3d] hover:bg-[#8b6e5d] text-white px-12 py-6 uppercase tracking-wider font-bold" 
-              onClick={() => setIsBookingOpen(true)}
-            >
-              Оставить заявку
-            </Button>
+        </div>
+      </section>
+
+      <section id="masterclass" className="py-20 px-6 bg-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Мастер-классы и шоу</h2>
+          <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
+          <div className="space-y-8">
+            <div className="border-l-4 border-[#6b4e3d] pl-6">
+              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-2">Кулинарные мастер-классы</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Интерактивные занятия по приготовлению блюд под руководством профессиональных шеф-поваров. Идеально для корпоративов и тимбилдингов.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-[#6b4e3d] pl-6">
+              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-2">Кулинарные шоу</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Зрелищное приготовление блюд прямо на глазах у гостей. Фламбирование, карвинг, молекулярная кухня.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-[#6b4e3d] pl-6">
+              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-2">Барное шоу</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Профессиональные бармены продемонстрируют искусство приготовления коктейлей с элементами флейринга.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-[#6b4e3d] pl-6">
+              <h3 className="text-2xl font-bold text-[#6b4e3d] mb-2">Candy bar и десертные станции</h3>
+              <p className="text-[#6b4e3d]/70 leading-relaxed">
+                Оформление и организация сладких столов, станций с живым приготовлением десертов.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 px-6 bg-[#f0ebe5]">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-[100px] text-center mb-4 text-[#6b4e3d] animate-pulse" style={{ fontFamily: "'Comforter Brush', cursive" }}>Контакты</h2>
+          <div className="w-20 h-1 bg-[#6b4e3d] mx-auto mb-16"></div>
+          <div className="bg-white rounded-lg shadow-lg p-12">
+            <div className="space-y-6 mb-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#6b4e3d] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Icon name="Phone" className="text-white" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-[#6b4e3d] mb-1">Телефон:</h3>
+                  <a href="tel:+79854208331" className="text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors">
+                    +7 (985) 420-83-31
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#6b4e3d] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Icon name="Mail" className="text-white" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-[#6b4e3d] mb-1">Email:</h3>
+                  <a href="mailto:info@catering.ru" className="text-[#6b4e3d]/70 hover:text-[#6b4e3d] transition-colors">
+                    info@catering.ru
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#6b4e3d] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Icon name="MapPin" className="text-white" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-[#6b4e3d] mb-1">Адрес:</h3>
+                  <p className="text-[#6b4e3d]/70">
+                    г. Москва, ул. Театральный проезд 5с1
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#6b4e3d] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Icon name="Clock" className="text-white" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-[#6b4e3d] mb-1">Режим работы:</h3>
+                  <p className="text-[#6b4e3d]/70">
+                    Ежедневно с 9:00 до 21:00
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center pt-6 border-t border-[#6b4e3d]/20">
+              <Button 
+                size="lg" 
+                className="bg-[#6b4e3d] hover:bg-[#8b6e5d] text-white px-12 py-6 uppercase tracking-wider font-bold" 
+                onClick={() => setIsBookingOpen(true)}
+              >
+                Оставить заявку
+              </Button>
+            </div>
           </div>
         </div>
       </section>
