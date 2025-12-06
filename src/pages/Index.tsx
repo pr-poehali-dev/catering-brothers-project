@@ -35,7 +35,7 @@ const Index = () => {
     <div className="min-h-screen">
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-gradient">BrosCatering</div>
+          <div className="text-2xl font-bold text-gradient rounded-none">КейтерЕВ</div>
           <div className="hidden md:flex gap-6">
             <a href="#home" className="hover:text-primary transition-colors">Главная</a>
             <a href="#about" className="hover:text-primary transition-colors">О нас</a>
